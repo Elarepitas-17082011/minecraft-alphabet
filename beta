@@ -1,0 +1,132 @@
+BetaCraft v1.09_17 (exe) (jar portable) (exe portable)
+11th September 2024, 12:46 GMT 
+Added: + Option to disable Mojang's Intel driver trick on Windows (might help with 'decaying' textures on b1.9+)  Fixes: • fixed the launcher freezing on "Logging in...", now it forces you to re-login • fixed getting stuck on "Downloading..." if you try to play the game offline with Discord RPC enabled • fixed failed requests & downloads not being treated properly • fixed not notifying when the Microsoft account has no Minecraft JE licence • fixed mods not properly rezipping with their base version • changed the way Classic and Alpha before a1.0.16 authenticate with servers, fixing an exploit  Other changes: • made addons & mods repository menus more intuitive • removed Mojang accounts support • the launcher now tries to detect Java installations in your system • the launcher now makes sure you use the correct Java installation for the game • the launcher now downloads and applies Java 8u51 for Intel Graphics users • updated Gson to help BTA achieve compatibility • due to Gson update, the minimal requirement for running the launcher is now Java 7 - legacy system users should stay on 1.09_16 for now  
+BetaCraft v1.09_16 (exe) (jar portable) (exe portable)
+13th August 2022, 19:00 GMT 
+Added: + Console log window (with pause/unpause, copy, clear options) + Option to change Java path for instance + New mods repository system (mod creators can now upload their mods to it independently) + BetaEvolutions support  Fixes: • fixed excessive amount of r/w operations at startup • Discord RPC not showing up • versions 12w18a, 12w19a and 12w21a now work again • the NSSS mod should now work again • client error stream is now printed to log file • fixed launcher not starting on Ubuntu on certain installations • URLs that return code 400 and above will be treated accordingly from now on • fixed uninstalled mods not listing when clicking on servers that run them  Other changes: • optional "Manual download" option for new updates, pointing to Github • the minimal requirement for running the launcher is now Java 5 • removed buggy and unsafe MSA auth flow, implemented device code flow in its place • made launch methods updatable & decentralized • language names are now standardized and use their own names instead of English • logs are handled better internally now • renamed default instance name to "default instance", and changed default RAM from 512M to 1G • launcher will now check if selected Java installation is greater than 8; if so, it will warn the user about it • instances can now be removed from instance list level • signing in to minecraft accounts now happens on a separate thread • it's possible to set a sha1 hash for versions in their .info files (useful for autoupdating mods) • decreased macOS requirement from 10.7.1 to 10.4.1 (though no proper support due to lack of dedicated testers) • removed unnecessary hardcoded JVM arguments • launcher & client logs now clear on every run • translation files lacking certain entries will now use default English ones in their place instead of 'null'  
+BetaCraft v1.09_15 (exe) (jar portable) (exe portable)
+26th November 2021, 19:27 GMT 
+Changes: + no more dependency on JavaFX for MSA (it is still buggy and is to be fixed next month)  Bugfixes: • fixed the launcher crashing when the config files are corrupted • now works again, under the new betacraft.uk domain  
+BetaCraft v1.09_14
+5th July 2021, 18:45 GMT 
+Changes: + you can now join online mode classic servers via the server IP prompt (not only through the server list) + online mode support for servers at versions c0.0.15a and c0.0.16a_02 + removed any dependencies on the https protocol where possible  Bugfixes: • fixed a graphical bug with overlapping tabs  
+BetaCraft v1.09_13
+28th June 2021, 18:45 CEST 
+Added: + Support for resizing c0.0.12a_03  Fixes: • Classic, Indev and Infdev should now work on macOS • servers for 12w18a and 12w19a should now download • corrected the padding on the login prompt • fixed all known issues with Discord RPC • fixed linux mouse stutter in early Classic • fixed issues with Java 16  Other changes: • the default version for an instance is now b1.7.3 • cleaned up a lot of code related to launching the game • early Indev versions will now request to set their size on launch • it's now possible to force the server IP prompt to appear by adding -Dbetacraft.ask_for_server=true to JVM arguments • it's now possible to use -Dbetacraft.resize_applet=true as an JVM argument to force the applet resizing panel to appear • the launcher will now run the game with the same JVM it's been run with • addons list is now more user friendly and addons automatically update  
+Libraries update 4
+26th June 2021, 10:35 CEST 
+All platforms | Bugfix: • Fixed gray screen from a1.1.1  To still experience the gray screen bug, add -Dbetacraft.grayScreen=true to JVM arguments  
+Libraries update 3
+4th April 2021, 21:00 CEST 
+All platforms | Bugfix: • Fixed sound not working in early Indev versions  
+BetaCraft v1.09_12
+31st March 2021, 23:57 CEST 
+Added: + Microsoft account support Fixed: • the launcher not working on older java 8 builds • unnecessary re-downloads • frame resizing back to original size after switching tabs • button size being too small for some languages • being unable to play the game while offline • choice buttons lacking translation Other changes: • the project now uses Gradle (it's not on github yet) • backend changes, implemented some code from the future 2.0 release • the launcher possibly loads quicker now • the default version for an instance is now b1.6.6  
+BetaCraft v1.09_11
+22nd October 2020, 22:00 CEST 
+Changes: + Added support for classic server authentication and heartbeat (also for Alpha to 1.5.2) - see Server list tab for more information + Hopefully the launcher should load quicker now  Bugfixes: • Fixed inf-20100413 crashing after a while of gameplay  
+BetaCraft v1.09_10
+3rd July 2020, 17:37 CEST 
+Changes: + Added descriptions for addons and mods + Optimized the startup process of the launcher + Joining servers is now possible for all versions that support it + Added version detector for seamless launch of versions without configuration file  Bugfixes: • De-bloated the wrapper code a bit • Fixed issues with joining servers on c0.0.15a-1 • Fixed bugs with windows and buttons • Completely redid the versions list  
+Libraries update 2
+24th April 2020, 15:51 CEST 
+All platforms | Bugfix: • Fixed lines appearing in clouds on AMD graphics  
+BetaCraft v1.09_09
+18th April 2020, 23:38 CEST 
+Changes: + Last closed tabs now save and load  Bugfixes: • Fixed black screens when "Keep the launcher open" was unselected. Do "Force update" to fix those issues. • Fixed autoupdate again  
+BetaCraft v1.09_08
+14th April 2020, 19:32 CEST 
+Bugfixes: • Fixed servers list for 0.0.15a  
+BetaCraft v1.09_07
+14th April 2020, 16:04 CEST 
+Bugfixes: • Fixed connection issues with c0.0.15a  
+BetaCraft v1.09_06
+14th April 2020, 02:25 CEST 
+Bugfixes: • Fixed autoupdate  
+BetaCraft v1.09_05
+14th April 2020, 01:58 CEST 
+Bugfixes: • Fixed addons and launch methods acting weird on Windows  
+BetaCraft v1.09_04
+13th April 2020, 23:16 CEST 
+Bugfixes: • Fixed Windows support  
+BetaCraft v1.09_03
+13th April 2020, 21:30 CEST 
+Bugfixes: • Fixed c0.0.15a unable to save  
+BetaCraft v1.09_02
+13th April 2020, 19:59 CEST 
+Changes: + More integration with pre-classic and early classic + Improved addons & launch methods + Added support for c0.0.15a  Bugfixes: • Fixed addons not deselecting  
+BetaCraft v1.09_01
+10th March 2020, 02:35 CET 
+Changes: + Made local custom versions display as "[Custom] %s" + Made jsons not mandatory for custom versions + The launcher won't attempt to launch the game if the nickname is blank + Re-added the username field above the Play button + Moved the "Log in" button to the right of the username field (if logged in, the nickname field is uneditable) + The wrapper no longer adds a "Minecraft " prefix before the instance name  Bugfixes: • Fixed the launcher frame extending vertically on Windows 10 • Fixed the username sometimes being an email • Fixed autoupdate • Fixed online saving in 13a_03 and 14a_08 • Fixed a bug when loading the launcher while being offline • Fixed addons sometimes doubling in the configuration, thus not allowing the game to start • Fixed cyrillics • Fixed mods repository name displaying versions list's name • Translated tab buttons  
+BetaCraft v1.09
+29th February 2020, 21:42 CET 
+Changes: + Made the launcher frame resizeable + Made the launcher use the default OS theme for the frame + Added window tabs (Changelog, Classic servers) + Added multiinstances + Added wrapper addons list with an API + Added mods repository: 
+· select the mods you want to add to your versions list and click OK 
++ Added the ability to change the game frame's icon + Added the ability to change the directory of the instance + Added mojang account authentication (not mandatory) + Minor changes to the GUI + Added versions 1.0.0 through 1.5.2 - Removed "More info" button in versions list Bugfixes: • Fixed the language file not always updating • Fixed Indev and Infdev not working • Fixed black screen in 0.24_st_03 and 0.30 • Fixed launching mc-161148  
+BetaCraft v1.08_02
+4th December 2019, 23:17 CET 
+Bugfixes: • Fixed the server IP input field not appearing • Fixed Discord RPC not showing the correct translation for a username.  
+BetaCraft v1.08_01
+28th November 2019, 16:12 CET 
+Changes: + The launcher now determines the launch class by the jar structure, not by the jar's name. Bugfixes: • Fixed launcher not working due to domain change  
+BetaCraft v1.08
+29th September 2019, 01:31 CEST 
+Changes: + Added support for Retrocraft servers + Added support for changing window dimensions in Classic and Indev + Added support for Minecraft 4k Bugfixes: • Fixed settings randomly resetting • Fixed locales not working on Discord RPC • Fixed forced updates • Fixed "Cancel" button in IP dialogue in Classics  
+BetaCraft v1.07
+20th July 2019, 22:14 CEST 
+Changes: + Optimization, the launcher should work faster now + Corrected some typos in the code + Changed the debug language from Polish to English Bugfixes: • Fixed launch arguments when typing more than 1 argument • Improved the detection of illegal characters in the name field • The launcher should now open/open the game correctly, the bug affected a lot of people • Fixed loading/failing messages on loading update news  
+BetaCraft v1.06
+13rd June 2019, 13:07 CEST 
+Changes: + Added an option to disable Discord RPC + The launcher now requests a skin update when launching with proxy - Removed the heavy easter egg Bugfixes: • Language files should now update correctly on every launch • Fixed not being able to type anything anywhere, and thus removed the Enter key feature  
+BetaCraft v1.05
+13rd May 2019, 21:00 CEST 
+Changes: + Added "Show more" button to the version list + Translated some entries to Polish + Added game and a launcher icon + Added an easter egg + You can now confirm changes with the Enter key Bugfixes: • Fixed a graphical glitch with the changelog background • Fixed launching the game with proxy arguments  
+BetaCraft v1.04
+6th May 2019, 20:47 CEST 
+Changes: + Connecting to Classic servers is now possible + Changed Retrocraft proxy to BetaCraft proxy Bugfix: • Fixed auto-update  
+BetaCraft v1.03_4
+28th April 2019, 18:50 CEST 
+Windows | Bugfix: • Attempted fix on auto-update  
+BetaCraft v1.03_3
+23rd April 2019, 14:07 CEST 
+Linux | Bugfix: • Fixed launching the game crashing it  
+BetaCraft v1.03_2
+22nd April 2019, 19:32 CEST 
+Changes: + The default version has been switched to b1.7.3 Bugfix: • Attempted fix on auto-update  
+BetaCraft v1.03_1
+19th April 2019, 11:59 CEST 
+Changes: + BetaCraftWrapper is now a part of the launcher + Support for Discord Rich Presence + Launcher's version now displays in the window frame name + Selected version now displays above the "Select version" button Bugfix: • Better support for Java 7  
+BetaCraftWrapper update
+8th March 2019, 15:28 CET 
+Bugfix: • Better compatibility with the oldest versions of the game  
+Libraries update 1
+24th February 2019, 15:13 CET 
+Windows | Bugfix: • No longer blackscreens 
+To fix the issue, go to %appdata%/.betacraft/ and delete the "bin" folder  
+BetaCraft v1.03
+23rd February 2019, 17:48 CET 
+Changes: + Can launch Pre-Classic + Implemented a brand new BetaCraftWrapper! Bugfix: • All version from the version list now work  Pre-Classic-Indev level.dat is saved in user.home directory (either your desktop or your account directory)  
+BetaCraft v1.02
+11th February 2019, 19:43 CET 
+Bugfix: • Corrected auto-update when the path for the file has spaces in it  
+BetaCraft v1.01
+11th February 2019, 18:46 CET 
+Windows | Bugfixes: • Fixed UTF-8 chars • Fixed auto-removing the unneeded natives • Fixed blank buttons  All platforms | Bugfix: • "Keep the launcher open" option should no longer cause issues  
+BetaCraft v1.00
+10th February 2019, 19:19 CET 
+Changes: + More instances possible! + Can run all listed versions!  • "Keep the launcher open" option might cause issue to some people  
+BetaCraft vPreview 3 build 3
+10th February 2019, 12:28 CET 
+Windows | Bugfix: • Attempted a fix on auto-update  
+BetaCraft vPreview 3 build 2
+9th February 2019, 20:29 CET 
+Changes: + Added languages!  
+BetaCraft vPreview 3 build 1
+9th February 2019, 16:34 CET 
+Changes: + Changed the launcher's look + Added version sorting + Support for Classic and early Indevs  
+BetaCraft vPreview 2
+5th February 2019, 23:57 CET 
+Windows | Bugfixes: • Auto-update • Launching the game All platforms | Changes: + Functional option panel + Implemented a new theme of the launcher • Changed the interface language to English  
+BetaCraft vPreview 1
+4th February 2019, 18:36 CET 
+Windows | Changes: + The launcher frame shows up  Linux | Changes: + Can launch the game on versions higher than a1.0.5_01 + Version list panel + Options panel (useless at the moment) + Auto-update feature  
